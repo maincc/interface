@@ -97,7 +97,7 @@ export const MATIC_MAINNET = new Token(
   'MATIC',
   'Polygon Matic'
 )
-const MATIC_POLYGON = new Token(ChainId.POLYGON, '0x0000000000000000000000000000000000001010', 18, 'MATIC', 'Matic')
+// const MATIC_POLYGON = new Token(ChainId.POLYGON, '0x0000000000000000000000000000000000001010', 18, 'MATIC', 'Matic')
 export const DAI_POLYGON = new Token(
   ChainId.POLYGON,
   '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063',
@@ -366,10 +366,29 @@ export function isPolygon(chainId: number): chainId is ChainId.POLYGON | ChainId
   return chainId === ChainId.POLYGON_MUMBAI || chainId === ChainId.POLYGON
 }
 
+class PolygonNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId
+  }
+
+  get wrapped(): Token {
+    if (!isPolygon(this.chainId)) throw new Error('Not bnb')
+    const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
+    invariant(wrapped instanceof Token)
+    return wrapped
+  }
+
+  public constructor(chainId: number) {
+    if (!isPolygon(chainId)) throw new Error('Not polygon')
+    super(chainId, 18, 'MATIC', 'MATIC')
+  }
+}
+
 function getPolygonNativeCurrency(chainId: number) {
   switch (chainId) {
     case ChainId.POLYGON:
-      return MATIC_POLYGON
+      // return MATIC_POLYGON
+      return new PolygonNativeCurrency(chainId)
     case ChainId.POLYGON_MUMBAI:
       return MATIC_POLYGON_MUMBAI
     default:
