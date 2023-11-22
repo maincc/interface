@@ -1,3 +1,26 @@
+# swap交易流程
+1、根据输入的代币对，从routeAPI、本地客户端以及UniswapX获取相应撮合路径。  
+2、获取到相应撮合路径后，构建交易获取报价。  
+3、通过钱包进行签名并发送到区块链上。  
+4、通过一系列合约操作完成交易。
+
+## 问题：
+#### 1、第一步中，在Polygon上通过routeAPI获取报价报错，通过本地客户端时与生产环境获取的报价严重不符。
+#### 原因：从github上down下来的Uniswap/interface的源代码中，为了让ETH链上的ETH等币种与其他代币中区分开，将每个币都用独有的类来表示，代币都统一使用Token类表示。在交换过程中，会将撮合路径的开始结算两种币种与输入的代币对进行对比，如果其中一个不符报错。通过分析代码，猜测是将Polygon网路上对MATIC币当作普通代币表示，导致在通过API（猜测在相应网路中，主币省略，用其代币表示，比如MATIC---WMATIC）获取撮合路径后进行对比时报错、通过本地获取路径时将其视为普通代币。
+#### 解决：构建一个Polygon独有币类并在切换网络时构建。（独有币类比Token类多一个ChainID、少一个address、isWrapped指向不同[一个指向1：1的代币（MATIC---WMATIC），一个指向自己（WMATIC---WMATIC）]）
+
+## 将CCDAO加入到BASES_TO_CHECK_TRADES_AGAINST  
+#### 在smart-order-router库先通过url（https://cloudflare-ipfs.com/ipns/api.uniswap.org/v1/pools/v3/${chainName}.json） 获取json文件内容（交易对组合数组）。获取不到最佳路径，则从设置中BASES_TO_CHECK_TRADES_AGAINST的币进行组合获取最佳路径。  
+#### 在URL获取的组合中包含CCDAO交易对，所以将CCDAO添加到BASES_TO_CHECK_TRADES_AGAINST（V2、V3协议）中
+
+##  修改如下：
+    1、向UniswapAPI获取路径的相关代码删除，采用客户端（本地）计算路径。（进行大量币种兑换与官网有差异）
+    2、将infura_KEY替换成新注册的key
+    3、将CCDAO添加到smart-order-route库里的BASES_TO_CHECK_TRADES_AGAINST。
+    4、将配置文件中https://api.uniswap.org替换成https://whuniswapfee.jccdex.cn:8440，通过代理访问https://api.uniswap.org（被拒）。
+    5、构建一个Polygon独有币类并在切换网络时构建。
+
+
 # Uniswap Labs Interface
 
 [![codecov](https://codecov.io/gh/Uniswap/interface/branch/main/graph/badge.svg?token=YVT2Y86O82)](https://codecov.io/gh/Uniswap/interface)
