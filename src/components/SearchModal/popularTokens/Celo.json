@@ -1,0 +1,143 @@
+{
+  "sectionKey": "popularTokens",
+  "data": [
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 42220,
+          "decimals": 18,
+          "symbol": "agEUR",
+          "name": "agEUR",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xc16b81af351ba9e64c1a069e3ab18c244a1e3049"
+        },
+        "currencyId": "42220-0xc16b81af351ba9e64c1a069e3ab18c244a1e3049",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/19479/large/agEUR-4.png?1710726218",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "UNKNOWN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 42220,
+          "decimals": 18,
+          "name": "Celo",
+          "symbol": "CELO",
+          "isNative": true,
+          "isToken": false,
+          "address": "0x471EcE3750Da237f93B8E339c536989b8978a438"
+        },
+        "currencyId": "42220-0x471EcE3750Da237f93B8E339c536989b8978a438",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/11090/large/InjXBNx9_400x400.jpg?1696511031",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "UNKNOWN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 42220,
+          "decimals": 6,
+          "symbol": "USD₮",
+          "name": "Tether USD",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x48065fbbe25f71c9282ddf5e1cd6d6a887483d5e"
+        },
+        "currencyId": "42220-0x48065fbbe25f71c9282ddf5e1cd6d6a887483d5e",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/325/large/Tether.png?1696501661",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "UNKNOWN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 42220,
+          "decimals": 6,
+          "symbol": "USDC",
+          "name": "USDC",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xceba9300f2b948710d2653dd7b07f33a8b32118c"
+        },
+        "currencyId": "42220-0xceba9300f2b948710d2653dd7b07f33a8b32118c",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/6319/large/usdc.png?1696506694",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "UNKNOWN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 42220,
+          "decimals": 18,
+          "symbol": "BTC",
+          "name": "Wrapped Bitcoin",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xd629eb00deced2a080b7ec630ef6ac117e614f1b"
+        },
+        "currencyId": "42220-0xd629eb00deced2a080b7ec630ef6ac117e614f1b",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/39574/large/wbtc.png?1722994041",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "UNKNOWN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 42220,
+          "decimals": 18,
+          "symbol": "cETH",
+          "name": "Wrapped Ethereum",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x2def4285787d58a2f811af24755a8150622f4361"
+        },
+        "currencyId": "42220-0x2def4285787d58a2f811af24755a8150622f4361",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/39711/large/WETH.PNG?1723731131",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "UNKNOWN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    }
+  ]
+}

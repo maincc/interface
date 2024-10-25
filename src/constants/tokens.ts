@@ -94,8 +94,8 @@ export const MATIC_MAINNET = new Token(
   ChainId.MAINNET,
   '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0',
   18,
-  'MATIC',
-  'Polygon Matic'
+  'POL',
+  'Polygon Ecosystem Token'
 )
 // const MATIC_POLYGON = new Token(ChainId.POLYGON, '0x0000000000000000000000000000000000001010', 18, 'MATIC', 'Matic')
 export const DAI_POLYGON = new Token(
@@ -154,8 +154,8 @@ const MATIC_POLYGON_MUMBAI = new Token(
   ChainId.POLYGON_MUMBAI,
   '0x0000000000000000000000000000000000001010',
   18,
-  'MATIC',
-  'Matic'
+  'POL',
+  'Polygon Ecosystem Token'
 )
 export const WETH_POLYGON_MUMBAI = new Token(
   ChainId.POLYGON_MUMBAI,
@@ -313,15 +313,15 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     ChainId.POLYGON,
     '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
     18,
-    'WMATIC',
-    'Wrapped MATIC'
+    'WPOL',
+    'Wrapped Polygon Ecosystem Token'
   ),
   [ChainId.POLYGON_MUMBAI]: new Token(
     ChainId.POLYGON_MUMBAI,
     '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889',
     18,
-    'WMATIC',
-    'Wrapped MATIC'
+    'WPOL',
+    'Wrapped Polygon Ecosystem token'
   ),
   [ChainId.CELO]: new Token(
     ChainId.CELO,
@@ -380,7 +380,7 @@ class PolygonNativeCurrency extends NativeCurrency {
 
   public constructor(chainId: number) {
     if (!isPolygon(chainId)) throw new Error('Not polygon')
-    super(chainId, 18, 'MATIC', 'MATIC')
+    super(chainId, 18, 'POL', 'Polygon Ecosystem Token')
   }
 }
 

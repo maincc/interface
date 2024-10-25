@@ -1,0 +1,764 @@
+{
+  "sectionKey": "popularTokens",
+  "data": [
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "1INCH",
+          "name": "1inch",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x111111111117dc0aa78b770fa6a738034120c302"
+        },
+        "currencyId": "56-0x111111111117dc0aa78b770fa6a738034120c302",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/13469/large/1inch-token.png?1696513230",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "AAVE",
+          "name": "Aave",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xfb6115445bff7b52feb98650c87f44907e58f802"
+        },
+        "currencyId": "56-0xfb6115445bff7b52feb98650c87f44907e58f802",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/12645/large/aave-token-round.png?1720472354",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "ALPHA",
+          "name": "Alpha Venture DAO",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xa1faa113cbe53436df28ff0aee54275c13b40975"
+        },
+        "currencyId": "56-0xa1faa113cbe53436df28ff0aee54275c13b40975",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/12738/large/Stella200x200-06.png?1696512537",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "ALT",
+          "name": "AltLayer",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb"
+        },
+        "currencyId": "56-0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/34608/large/Logomark_200x200.png?1715107868",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "ANKR",
+          "name": "Ankr",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xf307910a4c7bbc79691fd374889b36d8531b08e3"
+        },
+        "currencyId": "56-0xf307910a4c7bbc79691fd374889b36d8531b08e3",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/4324/large/U85xTl2.png?1696504928",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "ATA",
+          "name": "Automata",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xa2120b9e674d3fc3875f415a7df52e382f141225"
+        },
+        "currencyId": "56-0xa2120b9e674d3fc3875f415a7df52e382f141225",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/15985/large/ATA_Icon_%28Profile_2%29.png?1720487988",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "AXS",
+          "name": "Axie Infinity",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0"
+        },
+        "currencyId": "56-0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/13029/large/axie_infinity_logo.png?1696512817",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "BEAM",
+          "name": "Beam",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce"
+        },
+        "currencyId": "56-0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/32417/large/chain-logo.png?1698114384",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "BUSD",
+          "name": "BUSD Token",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+        },
+        "currencyId": "56-0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/31273/large/new_binance-peg-busd.png?1696530096",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "LINK",
+          "name": "ChainLink Token",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd"
+        },
+        "currencyId": "56-0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/877/large/chainlink-new-logo.png?1696502009",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "DAI",
+          "name": "Dai Stablecoin",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"
+        },
+        "currencyId": "56-0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/39784/large/dai.png?1724109857",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "ETH",
+          "name": "Ethereum Token",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
+        },
+        "currencyId": "56-0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/39580/large/weth.png?1723006716",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "FTM",
+          "name": "Fantom",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xad29abb318791d579433d831ed122afeaf29dcfe"
+        },
+        "currencyId": "56-0xad29abb318791d579433d831ed122afeaf29dcfe",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/16036/large/Fantom.png?1696515646",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "FET",
+          "name": "Fetch",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x031b41e504677879370e9dbcf937283a8691fa7f"
+        },
+        "currencyId": "56-0x031b41e504677879370e9dbcf937283a8691fa7f",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/5681/large/ASI.png?1719827289",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "FRAX",
+          "name": "Frax",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40"
+        },
+        "currencyId": "56-0x90c97f71e18723b0cf0dfa30ee176ab653e89f40",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/13422/large/FRAX_icon.png?1696513182",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "G",
+          "name": "Gravity",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649"
+        },
+        "currencyId": "56-0x9c7beba8f6ef6643abd725e45a4e8387ef260649",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/39200/large/gravity.jpg?1721020647",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "HFT",
+          "name": "Hashflow",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x44ec807ce2f4a6f2737a92e985f318d035883e47"
+        },
+        "currencyId": "56-0x44ec807ce2f4a6f2737a92e985f318d035883e47",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/26136/large/200x200_360.png?1728551257",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "HIGH",
+          "name": "Highstreet",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x5f4bde007dc06b867f86ebfe4802e34a1ffeed63"
+        },
+        "currencyId": "56-0x5f4bde007dc06b867f86ebfe4802e34a1ffeed63",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/18973/large/logosq200200Coingecko.png?1696518427",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "INJ",
+          "name": "Injective",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xa2b726b1145a4773f68593cf171187d8ebe4d495"
+        },
+        "currencyId": "56-0xa2b726b1145a4773f68593cf171187d8ebe4d495",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/12882/large/Secondary_Symbol.png?1696512670",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "JUP",
+          "name": "Jupiter",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x0231f91e02debd20345ae8ab7d71a41f8e140ce7"
+        },
+        "currencyId": "56-0x0231f91e02debd20345ae8ab7d71a41f8e140ce7",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/10351/large/logo512.png?1696510352",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "ZRO",
+          "name": "LayerZero",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd"
+        },
+        "currencyId": "56-0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/28206/large/ftxG9_TJ_400x400.jpeg?1696527208",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "MIM",
+          "name": "Magic Internet Money",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xfe19f0b51438fd612f6fd59c1dbb3ea319f433ba"
+        },
+        "currencyId": "56-0xfe19f0b51438fd612f6fd59c1dbb3ea319f433ba",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/37663/large/mim.png?1715167155",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 6,
+          "symbol": "DAR",
+          "name": "Mines of Dalarnia",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978"
+        },
+        "currencyId": "56-0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/19837/large/dar.png?1696519259",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "PEPE",
+          "name": "Pepe",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x25d887ce7a35172c62febfd67a1856f20faebb00"
+        },
+        "currencyId": "56-0x25d887ce7a35172c62febfd67a1856f20faebb00",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/29850/large/pepe-token.jpeg?1696528776",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "MATIC",
+          "name": "Polygon",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd"
+        },
+        "currencyId": "56-0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/4713/large/polygon.png?1698233745",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "STG",
+          "name": "Stargate Finance",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b"
+        },
+        "currencyId": "56-0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/24413/large/STG_LOGO.png?1696523595",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "SUSHI",
+          "name": "Sushi",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x947950bcc74888a40ffa2593c5798f11fc9124c4"
+        },
+        "currencyId": "56-0x947950bcc74888a40ffa2593c5798f11fc9124c4",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/12271/large/512x512_Logo_no_chop.png?1696512101",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "SYN",
+          "name": "Synapse",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xa4080f1778e69467e905b8d6f72f6e441f9e9484"
+        },
+        "currencyId": "56-0xa4080f1778e69467e905b8d6f72f6e441f9e9484",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/18024/large/synapse_social_icon.png?1696517540",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "USDT",
+          "name": "Tether USD",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x55d398326f99059ff775485246999027b3197955"
+        },
+        "currencyId": "56-0x55d398326f99059ff775485246999027b3197955",
+        "logoUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "UNI",
+          "name": "Uniswap",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1"
+        },
+        "currencyId": "56-0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/12504/large/uniswap-logo.png?1720676669",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+        },
+        "currencyId": "56-0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/35220/large/USDC.jpg?1707919050",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 18,
+          "symbol": "WBNB",
+          "name": "Wrapped BNB",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+        },
+        "currencyId": "56-0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/12591/large/binance-coin-logo.png?1696512401",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    },
+    {
+      "currencyInfo": {
+        "currency": {
+          "chainId": 56,
+          "decimals": 9,
+          "symbol": "SOL",
+          "name": "Wrapped SOL",
+          "isNative": false,
+          "isToken": true,
+          "address": "0xfa54ff1a158b5189ebba6ae130ced6bbd3aea76e"
+        },
+        "currencyId": "56-0xfa54ff1a158b5189ebba6ae130ced6bbd3aea76e",
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/22876/large/SOL_wh_small.png?1696522175",
+        "safetyInfo": {
+          "tokenList": "default",
+          "protectionResult": "BENIGN"
+        },
+        "safetyLevel": "VERIFIED",
+        "isSpam": false
+      },
+      "balanceUSD": null,
+      "quantity": null
+    }
+  ]
+}

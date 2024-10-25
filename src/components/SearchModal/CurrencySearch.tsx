@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-restricted-imports
+/* eslint-disable */
 import { t, Trans } from '@lingui/macro'
 import { InterfaceEventName, InterfaceModalName } from '@uniswap/analytics-events'
 import { ChainId, Currency, CurrencyAmount, Token } from '@uniswap/sdk-core'
@@ -29,6 +29,8 @@ import CommonBases from './CommonBases'
 import { CurrencyRow, formatAnalyticsEventProperties } from './CurrencyList'
 import CurrencyList from './CurrencyList'
 import { PaddedColumn, SearchInput, Separator } from './styled'
+
+import { getPopularTokens } from './popularTokens'
 
 const ContentWrapper = styled(Column)`
   background-color: ${({ theme }) => theme.surface1};
@@ -118,7 +120,8 @@ export function CurrencySearch({
       .filter(getTokenFilter(debouncedQuery))
       // Filter out tokens with balances so they aren't duplicated when we merge below.
       .filter((token) => !(token.address?.toLowerCase() in balances))
-    const mergedTokens = [...(portfolioTokens ?? []), ...filteredTokens]
+      const pupularTokens = getPopularTokens(chainId)
+      const mergedTokens = [...(portfolioTokens ?? []), ...filteredTokens, ...(pupularTokens ?? [])]
 
     if (balancesAreLoading) {
       return mergedTokens

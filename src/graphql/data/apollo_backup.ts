@@ -1,5 +1,4 @@
-/* eslint-disable */
-import { ApolloClient, InMemoryCache, HttpLink, ApolloLink, from, fromPromise } from '@apollo/client'
+import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { Reference, relayStylePagination } from '@apollo/client/utilities'
 
 const GRAPHQL_URL = process.env.REACT_APP_AWS_API_ENDPOINT
@@ -7,35 +6,13 @@ if (!GRAPHQL_URL) {
   throw new Error('AWS URL MISSING FROM ENVIRONMENT')
 }
 
-// 创建一个中间件来控制请求
-const controlLink = new ApolloLink((operation, forward) => {
-  return fromPromise(new Promise((resolve) => {
-    resolve({
-      data: {
-        nftBalances: [],
-        nftAssets: [],
-        nftActivity: [],
-        token: null,
-      },
-    });
-  }));
-});
-
-// 创建 HTTP 链接
-const httpLink = new HttpLink({
+export const apolloClient = new ApolloClient({
+  connectToDevTools: true,
   uri: GRAPHQL_URL,
   headers: {
     'Content-Type': 'application/json',
     Origin: 'https://app.uniswap.org',
   },
-});
-
-// 组合链接 
-const link = from([controlLink, httpLink]);
-
-export const apolloClient = new ApolloClient({
-  connectToDevTools: true,
-  link,
   cache: new InMemoryCache({
     typePolicies: {
       Query: {

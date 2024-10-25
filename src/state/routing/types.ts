@@ -538,5 +538,5 @@ type UniswapXConfig = {
   auctionPeriodSecs?: number
   startTimeBufferSecs?: number
 }
-
+// eslint-disable-next-line
 export type RoutingConfig = (UniswapXConfig | ClassicAPIConfig)[]

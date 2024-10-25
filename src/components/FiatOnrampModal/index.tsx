@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import { useCallback, useEffect, useState } from 'react'
@@ -72,50 +73,50 @@ export default function FiatOnrampModal() {
 
   const swapUrl = useHref('/swap')
 
-  const fetchSignedIframeUrl = useCallback(async () => {
-    if (!account) {
-      setError('Please connect an account before making a purchase.')
-      return
-    }
-    setLoading(true)
-    setError(null)
-    try {
-      const signedIframeUrlFetchEndpoint = process.env.REACT_APP_MOONPAY_LINK as string
-      const res = await fetch(signedIframeUrlFetchEndpoint, {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-        body: JSON.stringify({
-          theme: isDarkMode ? 'dark' : 'light',
-          colorCode: theme.accent1,
-          defaultCurrencyCode: getDefaultCurrencyCode(tokenAddress, network),
-          redirectUrl: swapUrl,
-          walletAddresses: JSON.stringify(
-            MOONPAY_SUPPORTED_CURRENCY_CODES.reduce(
-              (acc, currencyCode) => ({
-                ...acc,
-                [currencyCode]: account,
-              }),
-              {}
-            )
-          ),
-        }),
-      })
-      const { url } = await res.json()
-      setSignedIframeUrl(url)
-    } catch (e) {
-      console.log('there was an error fetching the link', e)
-      setError(e.toString())
-    } finally {
-      setLoading(false)
-    }
-  }, [account, isDarkMode, network, swapUrl, theme.accent1, tokenAddress])
+  // const fetchSignedIframeUrl = useCallback(async () => {
+  //   if (!account) {
+  //     setError('Please connect an account before making a purchase.')
+  //     return
+  //   }
+  //   setLoading(true)
+  //   setError(null)
+  //   try {
+  //     const signedIframeUrlFetchEndpoint = process.env.REACT_APP_MOONPAY_LINK as string
+  //     const res = await fetch(signedIframeUrlFetchEndpoint, {
+  //       headers: {
+  //         Accept: 'application/json',
+  //         'Content-Type': 'application/json',
+  //       },
+  //       method: 'POST',
+  //       body: JSON.stringify({
+  //         theme: isDarkMode ? 'dark' : 'light',
+  //         colorCode: theme.accent1,
+  //         defaultCurrencyCode: getDefaultCurrencyCode(tokenAddress, network),
+  //         redirectUrl: swapUrl,
+  //         walletAddresses: JSON.stringify(
+  //           MOONPAY_SUPPORTED_CURRENCY_CODES.reduce(
+  //             (acc, currencyCode) => ({
+  //               ...acc,
+  //               [currencyCode]: account,
+  //             }),
+  //             {}
+  //           )
+  //         ),
+  //       }),
+  //     })
+  //     const { url } = await res.json()
+  //     setSignedIframeUrl(url)
+  //   } catch (e) {
+  //     console.log('there was an error fetching the link', e)
+  //     setError(e.toString())
+  //   } finally {
+  //     setLoading(false)
+  //   }
+  // }, [account, isDarkMode, network, swapUrl, theme.accent1, tokenAddress])
 
-  useEffect(() => {
-    fetchSignedIframeUrl()
-  }, [fetchSignedIframeUrl])
+  // useEffect(() => {
+  //   fetchSignedIframeUrl()
+  // }, [fetchSignedIframeUrl])
 
   return (
     <Modal isOpen={fiatOnrampModalOpen} onDismiss={() => closeModal()} height={80 /* vh */}>
