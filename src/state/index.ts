@@ -19,6 +19,7 @@ export function createDefaultStore() {
           ignoredPaths: [routingApi.reducerPath, 'logs', 'lists'],
         },
         serializableCheck: {
+          warnAfter: 100,
           // meta.arg and meta.baseQueryMeta are defaults. payload.trade is a nonserializable return value, but that's ok
           // because we are not adding it into any persisted store that requires serialization (e.g. localStorage)
           ignoredActionPaths: ['meta.arg', 'meta.baseQueryMeta', 'payload.trade'],

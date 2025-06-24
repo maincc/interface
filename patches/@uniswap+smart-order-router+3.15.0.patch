@@ -56,6 +56,22 @@ index 68d11d3..f8dec1f 100644
      [ChainId.POLYGON_MUMBAI]: [],
      [ChainId.CELO]: [],
      [ChainId.CELO_ALFAJORES]: [],
+diff --git a/node_modules/@uniswap/smart-order-router/build/module/providers/v2/subgraph-provider-with-fallback.js b/node_modules/@uniswap/smart-order-router/build/module/providers/v2/subgraph-provider-with-fallback.js
+index 98ba2c7..c8b57c7 100644
+--- a/node_modules/@uniswap/smart-order-router/build/module/providers/v2/subgraph-provider-with-fallback.js
++++ b/node_modules/@uniswap/smart-order-router/build/module/providers/v2/subgraph-provider-with-fallback.js
+@@ -19,7 +19,10 @@ export class V2SubgraphProviderWithFallBacks {
+             const provider = this.fallbacks[i];
+             try {
+                 const pools = await provider.getPools(tokenIn, tokenOut, providerConfig);
+-                return pools;
++                // return pools;
++                if (!(pools.length == 0 && i < this.fallbacks.length - 1)) {
++                    return pools;
++                }
+             }
+             catch (err) {
+                 log.info(`Failed to get subgraph pools for V2 from fallback #${i}`);
 diff --git a/node_modules/@uniswap/smart-order-router/build/module/providers/v3/caching-subgraph-provider.js b/node_modules/@uniswap/smart-order-router/build/module/providers/v3/caching-subgraph-provider.js
 index f20cd07..a62af42 100644
 --- a/node_modules/@uniswap/smart-order-router/build/module/providers/v3/caching-subgraph-provider.js
@@ -101,3 +117,19 @@ index 26f8306..01b5a95 100644
      [ChainId.POLYGON_MUMBAI]: [
          DAI_POLYGON_MUMBAI,
          WRAPPED_NATIVE_CURRENCY[ChainId.POLYGON_MUMBAI],
+diff --git a/node_modules/@uniswap/smart-order-router/build/module/providers/v3/subgraph-provider-with-fallback.js b/node_modules/@uniswap/smart-order-router/build/module/providers/v3/subgraph-provider-with-fallback.js
+index 213cf5b..3cb01c6 100644
+--- a/node_modules/@uniswap/smart-order-router/build/module/providers/v3/subgraph-provider-with-fallback.js
++++ b/node_modules/@uniswap/smart-order-router/build/module/providers/v3/subgraph-provider-with-fallback.js
+@@ -15,7 +15,10 @@ export class V3SubgraphProviderWithFallBacks {
+             const provider = this.fallbacks[i];
+             try {
+                 const pools = await provider.getPools(tokenIn, tokenOut, providerConfig);
+-                return pools;
++                // return pools;
++                if (!(pools.length == 0 && i < this.fallbacks.length - 1)) {
++                    return pools;
++                }
+             }
+             catch (err) {
+                 log.info(`Failed to get subgraph pools for V3 from fallback #${i}`);

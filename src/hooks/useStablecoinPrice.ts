@@ -19,14 +19,14 @@ import {
 // Stablecoin amounts used when calculating spot price for a given currency.
 // The amount is large enough to filter low liquidity pairs.
 const STABLECOIN_AMOUNT_OUT: { [chainId: number]: CurrencyAmount<Token> } = {
-  [ChainId.MAINNET]: CurrencyAmount.fromRawAmount(USDC_MAINNET, 100_000e6),
-  [ChainId.ARBITRUM_ONE]: CurrencyAmount.fromRawAmount(USDC_ARBITRUM, 10_000e6),
-  [ChainId.OPTIMISM]: CurrencyAmount.fromRawAmount(DAI_OPTIMISM, 10_000e18),
-  [ChainId.POLYGON]: CurrencyAmount.fromRawAmount(USDC_POLYGON, 10_000e6),
-  [ChainId.CELO]: CurrencyAmount.fromRawAmount(CUSD_CELO, 10_000e18),
-  [ChainId.BNB]: CurrencyAmount.fromRawAmount(USDT_BSC, 100e18),
-  [ChainId.AVALANCHE]: CurrencyAmount.fromRawAmount(USDC_AVALANCHE, 10_000e6),
-  [ChainId.BASE]: CurrencyAmount.fromRawAmount(USDC_BASE, 10_000e6),
+  [ChainId.MAINNET]: CurrencyAmount.fromRawAmount(USDC_MAINNET, 1_000e6),
+  [ChainId.ARBITRUM_ONE]: CurrencyAmount.fromRawAmount(USDC_ARBITRUM, 1_000e6),
+  [ChainId.OPTIMISM]: CurrencyAmount.fromRawAmount(DAI_OPTIMISM, 1_000e18),
+  [ChainId.POLYGON]: CurrencyAmount.fromRawAmount(USDC_POLYGON, 1_000e6),
+  [ChainId.CELO]: CurrencyAmount.fromRawAmount(CUSD_CELO, 1_000e18),
+  [ChainId.BNB]: CurrencyAmount.fromRawAmount(USDT_BSC, 1_000e18),
+  [ChainId.AVALANCHE]: CurrencyAmount.fromRawAmount(USDC_AVALANCHE, 1_000e6),
+  [ChainId.BASE]: CurrencyAmount.fromRawAmount(USDC_BASE, 1_000e6),
 }
 
 /**
@@ -44,6 +44,7 @@ export default function useStablecoinPrice(currency?: Currency): Price<Currency,
     amountOut,
     currency,
     INTERNAL_ROUTER_PREFERENCE_PRICE
+    // RouterPreference.API
   )
   const price = useMemo(() => {
     if (!currency || !stablecoin) {
