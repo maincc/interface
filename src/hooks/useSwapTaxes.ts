@@ -1,11 +1,10 @@
 import { InterfaceEventName } from '@uniswap/analytics-events'
 import { ChainId, Percent } from '@uniswap/sdk-core'
-import { WETH_ADDRESS as getWethAddress } from '@uniswap/universal-router-sdk'
 import { useWeb3React } from '@web3-react/core'
 import FOT_DETECTOR_ABI from 'abis/fee-on-transfer-detector.json'
 import { FeeOnTransferDetector } from 'abis/types'
 import { sendAnalyticsEvent } from 'analytics'
-import { BIPS_BASE, ZERO_PERCENT } from 'constants/misc'
+import { ZERO_PERCENT } from 'constants/misc'
 import { useEffect, useState } from 'react'
 
 import { useContract } from './useContract'
@@ -31,8 +30,8 @@ function useFeeOnTransferDetectorContract(): FeeOnTransferDetector | null {
 }
 
 // TODO(WEB-2787): add tax-fetching for other chains
-const WETH_ADDRESS = getWethAddress(ChainId.MAINNET)
-const AMOUNT_TO_BORROW = 10000 // smallest amount that has full precision over bps
+// const WETH_ADDRESS = getWethAddress(ChainId.MAINNET)
+// const AMOUNT_TO_BORROW = 10000 // smallest amount that has full precision over bps
 
 const FEE_CACHE: { [address in string]?: { sellTax?: Percent; buyTax?: Percent } } = {}
 
@@ -50,21 +49,21 @@ async function getSwapTaxes(
     addresses.push(outputTokenAddress)
   }
 
-  try {
-    if (addresses.length) {
-      const data = await fotDetector.callStatic.batchValidate(addresses, WETH_ADDRESS, AMOUNT_TO_BORROW)
+  // try {
+  //   if (addresses.length) {
+  //     const data = await fotDetector.callStatic.batchValidate(addresses, WETH_ADDRESS, AMOUNT_TO_BORROW)
 
-      addresses.forEach((address, index) => {
-        const { sellFeeBps, buyFeeBps } = data[index]
-        const sellTax = new Percent(sellFeeBps.toNumber(), BIPS_BASE)
-        const buyTax = new Percent(buyFeeBps.toNumber(), BIPS_BASE)
+  //     addresses.forEach((address, index) => {
+  //       const { sellFeeBps, buyFeeBps } = data[index]
+  //       const sellTax = new Percent(sellFeeBps.toNumber(), BIPS_BASE)
+  //       const buyTax = new Percent(buyFeeBps.toNumber(), BIPS_BASE)
 
-        FEE_CACHE[address] = { sellTax, buyTax }
-      })
-    }
-  } catch (e) {
-    console.warn('Failed to get swap taxes for token(s):', addresses, e)
-  }
+  //       FEE_CACHE[address] = { sellTax, buyTax }
+  //     })
+  //   }
+  // } catch (e) {
+  //   console.warn('Failed to get swap taxes for token(s):', addresses, e)
+  // }
 
   const inputTax = (inputTokenAddress ? FEE_CACHE[inputTokenAddress]?.sellTax : ZERO_PERCENT) ?? ZERO_PERCENT
   const outputTax = (outputTokenAddress ? FEE_CACHE[outputTokenAddress]?.buyTax : ZERO_PERCENT) ?? ZERO_PERCENT
