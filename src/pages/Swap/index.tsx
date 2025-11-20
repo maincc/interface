@@ -327,6 +327,8 @@ export function Swap({
           },
     [independentField, parsedAmount, showWrap, trade]
   )
+  // console.log(trade?.inputAmount, trade?.postTaxOutputAmount)
+  // console.log(parsedAmounts)
 
   const showFiatValueInput = Boolean(parsedAmounts[Field.INPUT])
   const showFiatValueOutput = Boolean(parsedAmounts[Field.OUTPUT])

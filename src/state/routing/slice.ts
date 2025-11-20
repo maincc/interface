@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { createApi, fetchBaseQuery, FetchBaseQueryError } from '@reduxjs/toolkit/query/react'
 import { Protocol } from '@uniswap/router-sdk'
 import ms from 'ms'
@@ -13,6 +14,13 @@ import {
   TradeResult,
 } from './types'
 import { transformRoutesToTrade } from './utils'
+
+// eslint-disable-next-line
+import { AlphaRouter } from '@uniswap/smart-order-router'
+// eslint-disable-next-line
+import { RPC_URLS } from 'constants/networks'
+// eslint-disable-next-line
+import AppStaticJsonRpcProvider from 'rpc/StaticJsonRpcProvider'
 
 const UNISWAP_API_URL = process.env.REACT_APP_UNISWAP_API_URL
 if (UNISWAP_API_URL === undefined) {
@@ -62,12 +70,14 @@ export const routingApi = createApi({
           }
         )
       },
+      // async queryFn(args) {
       async queryFn(args) {
         logSwapQuoteRequest(args.tokenInChainId, args.routerPreference, false)
         const quoteStartMark = performance.mark(`quote-fetch-start-${Date.now()}`)
+        const { getRouter, getClientSideQuote } = await import('lib/hooks/routing/clientSideSmartOrderRouter')
 
         try {
-          const { getRouter, getClientSideQuote } = await import('lib/hooks/routing/clientSideSmartOrderRouter')
+          // const { getRouter, getClientSideQuote } = await import('lib/hooks/routing/clientSideSmartOrderRouter')
           const router = getRouter(args.tokenInChainId)
           const quoteResult = await getClientSideQuote(args, router, CLIENT_PARAMS)
           if (quoteResult.state === QuoteState.SUCCESS) {
@@ -79,9 +89,41 @@ export const routingApi = createApi({
             return { data: { ...quoteResult, latencyMs: getQuoteLatencyMeasure(quoteStartMark).duration } }
           }
         } catch (error: any) {
+          // console.warn(`GetQuote failed on client: ${error}`)
+          // return {
+          //   error: { status: 'CUSTOM_ERROR', error: error?.detail ?? error?.message ?? error },
+          // }
+
           console.warn(`GetQuote failed on client: ${error}`)
-          return {
-            error: { status: 'CUSTOM_ERROR', error: error?.detail ?? error?.message ?? error },
+          if (args.tokenInChainId == 1) {
+            try {
+              const retryRouter = new AlphaRouter({
+                chainId: args.tokenInChainId,
+                provider: new AppStaticJsonRpcProvider(args.tokenInChainId, RPC_URLS[args.tokenInChainId][1]),
+              })
+              const retryQuoteResult = await getClientSideQuote(args, retryRouter, CLIENT_PARAMS)
+              if (retryQuoteResult.state === QuoteState.SUCCESS) {
+                const trade = await transformRoutesToTrade(
+                  args,
+                  retryQuoteResult.data,
+                  QuoteMethod.CLIENT_SIDE_FALLBACK
+                )
+                return {
+                  data: { ...trade, latencyMs: getQuoteLatencyMeasure(quoteStartMark).duration },
+                }
+              } else {
+                return { data: { ...retryQuoteResult, latencyMs: getQuoteLatencyMeasure(quoteStartMark).duration } }
+              }
+            } catch (error) {
+              console.warn(`GetQuote failed on client: ${error}`)
+              return {
+                error: { status: 'CUSTOM_ERROR', error: error?.detail ?? error?.message ?? error },
+              }
+            }
+          } else {
+            return {
+              error: { status: 'CUSTOM_ERROR', error: error?.detail ?? error?.message ?? error },
+            }
           }
         }
       },
