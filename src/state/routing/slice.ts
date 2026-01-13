@@ -4,6 +4,7 @@ import { Protocol } from '@uniswap/router-sdk'
 import ms from 'ms'
 import { logSwapQuoteRequest } from 'tracing/swapFlowLoggers'
 import { trace } from 'tracing/trace'
+import { ChainId } from '@uniswap/sdk-core'
 
 import {
   GetQuoteArgs,
@@ -95,7 +96,11 @@ export const routingApi = createApi({
           // }
 
           console.warn(`GetQuote failed on client: ${error}`)
-          if (args.tokenInChainId == 1) {
+          if (
+            args.tokenInChainId == ChainId.MAINNET ||
+            args.tokenInChainId == ChainId.BNB ||
+            args.tokenInChainId == ChainId.POLYGON
+          ) {
             try {
               const retryRouter = new AlphaRouter({
                 chainId: args.tokenInChainId,
